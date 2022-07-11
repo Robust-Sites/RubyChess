@@ -10,4 +10,8 @@ class Knight < Piece
         moves = []
         moves
     end
+    
+    def return_moves
+        
+    end
 end
