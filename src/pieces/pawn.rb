@@ -10,8 +10,14 @@ class Pawn < Piece
     moves
   end
 
+  def is_white?
+    @color == 'white'
+  end
+
   def at_start
   end
+
+
 
   def forward
   end
