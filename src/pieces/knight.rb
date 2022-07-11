@@ -1,3 +1,2 @@
-class Piece
-    attr_accessor :color, :color
-end
+require_relative 'piece'
+require_relative 'piece_helpers'
