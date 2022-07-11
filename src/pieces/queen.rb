@@ -2,8 +2,6 @@ require_relative 'piece'
 require_relative 'piece_helpers'
 
 class Queen < Piece
-  attr_accessor :x, :y
-
   def initialize(coordinate, color)
     super(coordinate, color)
     @x = coordinate[0]
@@ -46,6 +44,3 @@ class Queen < Piece
     moves
   end
 end
-
-first = Queen.new([0, 0], "white")
-p first.possible_moves
