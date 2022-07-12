@@ -8,5 +8,10 @@ describe Rook do
       expect(rook.coordinate).not_to be_nil
       expect(rook.color).not_to be_nil
     end
-
     
+    it "can return a list of possible_moves" do
+      expect(rook.possible_moves).not_to be_nil
+    end
+  end
+
+
