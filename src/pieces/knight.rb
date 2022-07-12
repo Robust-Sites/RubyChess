@@ -58,6 +58,3 @@ class Knight < Piece
     moves
   end
 end
-
-knight = Knight.new([0,0], 'black')
-p knight.return_moves
