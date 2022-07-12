@@ -27,6 +27,11 @@ class Bishop < Piece
     end
     moves
   end
+
+  def y_equals_negative_x_moves
+    moves = []
+    x_coordinates = chess_line(@x)
+    y_coordinates = chess_line(@y)
 end
 bishop = Bishop.new([3,3], "black")
 p bishop.possible_moves
