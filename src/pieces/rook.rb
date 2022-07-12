@@ -9,5 +9,11 @@ class Rook < Piece
     @x = coordinate[0]
     @y = coordinate[1]
   end
-  
+
+  def possible_moves
+    moves = []
+    moves
+  end
+
+  def vertical_moves
 end
