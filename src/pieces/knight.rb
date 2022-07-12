@@ -36,23 +36,28 @@ class Knight < Piece
     while y_final > 7
       y_final -= 1
     end
-
-    #actual logic
-    while x_start < x_final
-      while y_start < y_final
-        change_in_x = x_start - @x
-        change_in_y = y_start - @y
+  
+    x_index = x_start
+    y_index = y_start
+    while x_index < x_final
+      y_index = y_start
+      while y_index < y_final
+        change_in_x = x_index - x_start
+        change_in_y = y_index - y_start
         absolute_value_x = change_in_x.abs()
         absolute_value_y = change_in_y.abs()
-        moved_three_spaces = (change_in_x).abs() + (change_in_y).abs()
-        if (moved_three_spaces)
-          moves.push([x_start, y_start])
+        moved_three_spaces = (change_in_x).abs() + (change_in_y).abs() == 3
+        p "#{moved_three_spaces}"
+        if moved_three_spaces
+          moves.push([x_index, y_index])
         end
-        y_start += 1
+        y_index += 1
       end
-      x_start += 1
+      x_index += 1
     end
+    moves
   end
 end
+
 knight = Knight.new([0,0], 'black')
-p knight.possible_moves()
+p knight.return_moves
