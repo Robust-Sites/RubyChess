@@ -20,14 +20,7 @@ describe Queen do
 
     it "does not return value's that are out of bounds" do 
       moveset = queen.possible_moves
-      moveset.each do |coordinate|
-        x = coordinate[0]
-        y = coordinate[1]
-        expect(x).not_to be < 0 
-        expect(x).not_to be > 7 
-        expect(y).not_to be < 0
-        expect(y).not_to be > 7
-      end 
+      out_of_bounds(moveset)
     end
 
     it "returns all coordinates except its own in available chess_lines" do 

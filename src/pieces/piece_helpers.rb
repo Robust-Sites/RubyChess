@@ -1,7 +1,8 @@
 def filter_out_of_bounds array_of_moves
   valid_moves = []
   array_of_moves.each do |coordinate|
-    x, y = coordinate[0], coordinate[1]
+    x = coordinate[0]
+    y = coordinate[1]
     if (x > 7 || x < 0) || (y > 7 || y < 0)
       next
     else 

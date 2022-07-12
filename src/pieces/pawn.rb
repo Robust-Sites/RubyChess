@@ -1,4 +1,5 @@
 require_relative 'piece'
+require_relative 'piece_helpers'
 
 class Pawn < Piece
   def initialize(coordinate, color)
@@ -8,8 +9,17 @@ class Pawn < Piece
   end
 
   def possible_moves
-    moves = []
-    moves
+    moves = [
+      *forward, 
+      *take_left,
+      *take_right
+    ] 
+
+    if at_start?
+      moves.push(forward 2)
+    end
+
+    return filter_out_of_bounds(moves)
   end
 
   def is_white?
@@ -37,6 +47,7 @@ class Pawn < Piece
       return [@x, @y + counter]
     else
       return [@x, @y - counter]
+    end
   end
 
   def right(counter=1)

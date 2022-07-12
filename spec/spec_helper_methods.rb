@@ -11,3 +11,14 @@ def create_coordinate_array(x_values, y_values)
   end
   coordinates
 end
+
+def out_of_bounds coordinate_array
+  coordinate_array.each do |coordinate|
+    x = coordinate[0]
+    y = coordinate[1]
+    expect(x).not_to be < 0 
+    expect(x).not_to be > 7 
+    expect(y).not_to be < 0
+    expect(y).not_to be > 7
+  end   
+end
