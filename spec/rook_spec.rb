@@ -1,4 +1,4 @@
-require '../src/pieces/rook.rb'
+require_relative '../src/pieces/rook.rb'
 
 describe Rook do 
   context "An instance of rook" do
@@ -14,4 +14,11 @@ describe Rook do
     end
   end
 
+  #context "A rook's possible_moves" do
+  #  rook = Rook.new([0,0], "white")
+  #  it "should not return value's that are out of bounds" do
+  #    expect(rook.possible_moves).to
+  #  end
+  #end
+end
 
