@@ -8,6 +8,7 @@ def filter_out_of_bounds array_of_moves
       valid_moves.push(coordinate)
     end
   end
+  valid_moves
 end
 
 def chess_line(to_remove=nil)
