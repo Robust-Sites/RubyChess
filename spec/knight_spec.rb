@@ -1,4 +1,5 @@
 require_relative '../src/pieces/knight.rb'
+require_relative '../spec/spec_helper_methods.rb'
 
 describe Knight do
   context "An instance of knight" do 
@@ -10,7 +11,7 @@ describe Knight do
     end
 
     it "can return a list of possible_moves" do
-      expect(knight.possible_moves)
+      expect(knight.possible_moves).not_to be_nil
     end
   end
 
@@ -21,8 +22,16 @@ describe Knight do
     end
 
     it "should" do
-
     end
+  end
 
+  context "a knight on [5, 1]" do 
+    knight = Knight.new([5, 1], "white")
+    it "returns the appropriate moveset" do 
+      expected_moveset = create_coordinate_array(
+                           [3, 3, 4, 6, 7, 7],
+                           [2, 0, 3, 3, 2, 0]) 
+      assert_coordinates(knight, expected_moveset)
+    end
   end
 end
