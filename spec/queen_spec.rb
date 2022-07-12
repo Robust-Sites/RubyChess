@@ -10,7 +10,7 @@ describe Queen do
     end
 
     it "can return a list of possible_moves" do 
-      expect(queen.possible_moves
+      expect(queen.possible_moves)
     end
   end
 
