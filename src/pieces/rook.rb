@@ -12,7 +12,7 @@ class Rook < Piece
 
   def possible_moves
     moves = [
-      *vertical_moves
+      *vertical_moves,
       *horizontal_moves
     ]
     moves
@@ -30,11 +30,9 @@ class Rook < Piece
   def horizontal_moves
     moves = []
     x_coordinates = chess_line(@x)
-    x_coordinate.each do |num|
+    x_coordinates.each do |num|
       moves.push([num, @y])
     end
     moves
+  end
 end
-
-rook = Rook.new([0,0], "green")
-p rook.possible_moves
