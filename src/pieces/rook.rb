@@ -11,7 +11,10 @@ class Rook < Piece
   end
 
   def possible_moves
-    moves = []
+    moves = [
+      *vertical_moves
+      *horizontal_moves
+    ]
     moves
   end
 
@@ -32,3 +35,6 @@ class Rook < Piece
     end
     moves
 end
+
+rook = Rook.new([0,0], "green")
+p rook.possible_moves
