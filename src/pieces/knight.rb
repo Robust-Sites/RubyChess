@@ -47,9 +47,9 @@ class Knight < Piece
         absolute_value_x = change_in_x.abs()
         absolute_value_y = change_in_y.abs()
         moved_three_spaces = (change_in_x).abs() + (change_in_y).abs() == 3
-        p "#{moved_three_spaces}"
         if moved_three_spaces
-          moves.push([x_index, y_index])
+          coordinate = [x_index, y_index]
+          moves.push(coordinate)
         end
         y_index += 1
       end
