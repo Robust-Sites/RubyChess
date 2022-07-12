@@ -16,4 +16,12 @@ class Rook < Piece
   end
 
   def vertical_moves
+    moves = []
+    y_coordinates = chess_line(@y)
+    y_coordinates.each do |num|
+      moves.push([@x, num])
+    end
+    moves
+  end
+  
 end
