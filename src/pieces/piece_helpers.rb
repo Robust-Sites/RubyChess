@@ -15,10 +15,3 @@ def chess_line(to_remove=nil)
   full_array.delete to_remove 
   full_array
 end
-
-def reverse_chess_line(to_remove=nil)
-  full_array = [*0..7]
-  full_array.delete to_remove
-  reversed = full_array.reverse
-  reversed
-end

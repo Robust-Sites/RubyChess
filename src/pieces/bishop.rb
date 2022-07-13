@@ -28,9 +28,8 @@ class Bishop < Piece
     end
     moves
   end
-  #[[0,6][1,5],[2,4],[4,2],[5,1][6,0]] 3,3
-  #[[1,7],[2,6],[3,5],[5,3],[6,2],[7,1]] 4,4
-  def y_equals_negative_x_moves #For current test
+
+  def y_equals_negative_x_moves
     moves = []
     range = @x + @y
     x_coordinates = chess_line(@x)
