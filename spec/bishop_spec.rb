@@ -14,3 +14,6 @@ describe Bishop do
       expect(queen.possible_moves).not_to be_nil
     end
   end
+
+  context "A knight's possible_moves" do
+    knight = Knight.new([5,5], "black")
