@@ -21,10 +21,8 @@ class Bishop < Piece
     moves = []
     x_coordinates = chess_line(@x)
     y_coordinates = chess_line(@y)
-    y_index = 0
-    x_coordinates.each do |num|
-      moves.push([num, y_coordinates[y_index]])
-      y_index += 1
+    x_coordinates.each_with_index do |num, idx|
+      moves.push([num, y_coordinates[idx]])
     end
     moves
   end
