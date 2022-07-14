@@ -40,5 +40,3 @@ class Bishop < Piece
     moves
   end
 end
-bishop = Bishop.new([3,3], "black")
-p bishop.possible_moves
