@@ -22,3 +22,8 @@ describe Bishop do
       moveset = knight.possible_moves
       out_of_bounds(moveset)
     end
+
+    it "returns all coordinates except its own in available chess_lines" do
+      moveset = knight.possible_moves
+      expect(moveset).not_to include([5,5])
+    end
