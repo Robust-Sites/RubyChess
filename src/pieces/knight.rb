@@ -9,13 +9,8 @@ class Knight < Piece
       @x = coordinate[0]
       @y = coordinate[1]
   end
-
-  def possible_moves
-    moves = []
-    moves
-  end
     
-  def return_moves
+  def possible_moves
     moves = []
     #check confines of start values
     x_start = @x - 3 
@@ -36,18 +31,16 @@ class Knight < Piece
     while y_final > 7
       y_final -= 1
     end
-  
     x_index = x_start
     y_index = y_start
-    while x_index < x_final
+    while x_index <= x_final
       y_index = y_start
-      while y_index < y_final
-        change_in_x = x_index - x_start
-        change_in_y = y_index - y_start
-        absolute_value_x = change_in_x.abs()
-        absolute_value_y = change_in_y.abs()
+      while y_index <= y_final
+        change_in_x = (x_index - @x).abs
+        change_in_y = (y_index - @y).abs
         moved_three_spaces = (change_in_x).abs() + (change_in_y).abs() == 3
-        if moved_three_spaces
+        no_zero_change = change_in_x > 0 && change_in_y > 0
+        if moved_three_spaces && no_zero_change
           coordinate = [x_index, y_index]
           moves.push(coordinate)
         end
