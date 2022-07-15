@@ -17,3 +17,8 @@ describe Bishop do
 
   context "A knight's possible_moves" do
     knight = Knight.new([5,5], "black")
+
+    it "does not return value's that are out of bounds" do
+      moveset = knight.possible_moves
+      out_of_bounds(moveset)
+    end
