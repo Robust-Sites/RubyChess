@@ -33,7 +33,8 @@ class Bishop < Piece
     x_coordinates = chess_line(@x)
     x_coordinates.each do |num|
       y_coordinate = range - num
-      if y_coordinate >= 0
+      y_in_range =y_coordinate >= 0 && y_coordinate <= 7
+      if y_in_range
         moves.push([num, y_coordinate])
       end
     end
