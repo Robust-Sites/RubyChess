@@ -24,7 +24,7 @@ class Bishop < Piece
     while index <= 7
       difference_between_x = @x - index
       y_value = @y - difference_between_x
-      x_value_not_coordinate = index != @x
+      x_value_not_coordinate = (index != @x)
       if y_value >= 0 && x_value_not_coordinate
         moves.push([index, y_value])
       end
