@@ -11,8 +11,8 @@ class Bishop < Piece
 
   def possible_moves
     moves = [
-      #*y_equals_x_moves,
-      *y_equals_negative_x_moves
+      *y_equals_x_moves,
+      #*y_equals_negative_x_moves
     ]
     moves
   end
