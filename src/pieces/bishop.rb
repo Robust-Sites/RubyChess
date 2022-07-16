@@ -11,7 +11,7 @@ class Bishop < Piece
 
   def possible_moves
     moves = [
-      *y_equals_x_moves,
+      #*y_equals_x_moves,
       *y_equals_negative_x_moves
     ]
     moves
@@ -41,3 +41,6 @@ class Bishop < Piece
     moves
   end
 end
+
+bishop = Bishop.new([7,3], "black")
+p bishop.possible_moves
