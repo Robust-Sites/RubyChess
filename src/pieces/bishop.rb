@@ -18,11 +18,17 @@ class Bishop < Piece
   end
 
   def y_equals_x_moves
+    # bishop 7,3 returns [[4,0],[5,1],[6,2]]
     moves = []
-    x_coordinates = chess_line(@x)
-    y_coordinates = chess_line(@y)
-    x_coordinates.each_with_index do |num, idx|
-      moves.push([num, y_coordinates[idx]])
+    index = 0
+    while index <= 7
+      difference_between_x = @x - index
+      y_value = @y - difference_between_x
+      x_value_not_coordinate = index != @x
+      if y_value >= 0 && x_value_not_coordinate
+        moves.push([index, y_value])
+      end
+      index += 1
     end
     moves
   end
@@ -42,5 +48,5 @@ class Bishop < Piece
   end
 end
 
-bishop = Bishop.new([7,3], "black")
+bishop = Bishop.new([5,2], "black")
 p bishop.possible_moves
