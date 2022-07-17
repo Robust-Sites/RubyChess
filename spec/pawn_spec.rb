@@ -24,6 +24,14 @@ describe Pawn do
       it "should be able to move forward two spaces" do 
         expect(pawn.possible_moves).to include([3, 3]) 
       end
+
+      it "should return the appropriate moveset" do 
+        expect(pawn.possible_moves).to include([2,2]) 
+        expect(pawn.possible_moves).to include([3,2])
+        expect(pawn.possible_moves).to include([3,3])
+        expect(pawn.possible_moves).to include([4,2])
+
+      end
     end
 
     context "with color: black" do 

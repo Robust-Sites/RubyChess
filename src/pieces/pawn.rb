@@ -10,9 +10,9 @@ class Pawn < Piece
 
   def possible_moves
     moves = [
-      *forward, 
-      *take_left,
-      *take_right
+      forward, 
+      take_left,
+      take_right
     ] 
 
     if at_start?
@@ -36,9 +36,9 @@ class Pawn < Piece
 
   def forward(counter=1)
     if self.is_white?
-      return [@x, @y + counter]
+      return([@x, @y + counter])
     else
-      return [@x, @y - counter]
+      return([@x, @y - counter])
     end
   end
 
