@@ -35,4 +35,14 @@ describe Queen do
       assert_coordinates(queen, coordinates_to_test)
     end
   end
+
+  context "in the top right (7, 6) position" do 
+    queen = Queen.new([7, 6], "black")
+    it "returns coordinates for its moveset in array" do 
+      coordinates_to_test = create_coordinate_array(
+                              [0,1,2,3,4,5,6,1,2,3,4,5,6,7,7,7,7,7,7],
+                              [6,6,6,6,6,6,6,0,1,2,3,4,5,0,1,2,3,4,5])
+      assert_coordinates(queen, coordinates_to_test)
+    end
+  end
 end
