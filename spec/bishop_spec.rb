@@ -37,4 +37,10 @@ describe Bishop do
   end
 
   context "A bishop's possible_moves on coordinate [4,1]" do
+    bishop = Bishop.new([4,1], "black")
+    it "does not return value's that are out of bounds" do 
+      moveset = bishop.possible_moves
+      out_of_bounds(moveset)
+    end
+  end
 end
