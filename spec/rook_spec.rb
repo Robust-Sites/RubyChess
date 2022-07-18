@@ -38,7 +38,13 @@ describe Rook do
       moveset = rook.possible_moves
       expect(moveset).not_to include([6,2])
     end
-  end
 
+    it "returns coordinate for its moveset in array" do
+      coordinates_to_test = create_coordinate_array(
+                              [0,1,2,3,4,5,7,6,6,6,6,6,6,6],
+                              [2,2,2,2,2,2,2,0,1,3,4,5,6,7])
+      assert_coordinates(rook, coordinates_to_test)
+    end
+  end
 end
 
