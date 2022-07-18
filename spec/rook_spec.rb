@@ -22,7 +22,7 @@ describe Rook do
       coordinates_to_test = create_coordinate_array(
                               [1,2,3,4,5,6,7,0,0,0,0,0,0,0],
                               [0,0,0,0,0,0,0,1,2,3,4,5,6,7])
-      assert_coordinates(bishop, coordinates_to_test)
+      assert_coordinates(rook, coordinates_to_test)
       end
   end
 

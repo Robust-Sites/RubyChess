@@ -16,5 +16,4 @@ class Bishop < Piece
     ]
     moves
   end
-
 end
