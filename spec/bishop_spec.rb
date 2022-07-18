@@ -15,7 +15,7 @@ describe Bishop do
     end
   end
 
-  context "A bishop's possible_moves" do
+  context "A bishop's possible_moves on coordinate [5,5]" do
     bishop = Bishop.new([5,5], "black")
 
     it "does not return value's that are out of bounds" do
@@ -32,6 +32,26 @@ describe Bishop do
       coordinates_to_test = create_coordinate_array(
                               [0,1,2,3,4,6,7,3,4,6,7],
                               [0,1,2,3,4,6,7,7,6,4,3])
+      assert_coordinates(bishop, coordinates_to_test)
+    end
+  end
+
+  context "A bishop's possible_moves on coordinate [4,1]" do
+    bishop = Bishop.new([4,1], "black")
+    it "does not return value's that are out of bounds" do 
+      moveset = bishop.possible_moves
+      out_of_bounds(moveset)
+    end
+
+    it "returns all coordinates except its own in available chess_lines" do
+      moveset = bishop.possible_moves
+      expect(moveset).not_to include([4,1])
+    end
+    
+    it "returns coordinate for its moveset in array" do
+      coordinates_to_test = create_coordinate_array(
+                              [3,5,6,7,0,1,2,3,5],
+                              [0,2,3,4,5,4,3,2,0])
       assert_coordinates(bishop, coordinates_to_test)
     end
   end
