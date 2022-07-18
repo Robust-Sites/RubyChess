@@ -18,6 +18,11 @@ describe Knight do
     it "should not return value's that are out of bounds" do 
       expect(knight.possible_moves)
     end
+
+    it "returns all coordinates except its own in available chess_lines" do
+      moveset = knight.possible_moves
+      expect(moveset).not_to include([4,1])
+    end
   end
 
   context "a knight on [5, 1]" do 
