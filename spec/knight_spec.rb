@@ -13,15 +13,10 @@ describe Knight do
     it "can return a list of possible_moves" do
       expect(knight.possible_moves).not_to be_nil
     end
-  end
 
-  context "A knight's possible moves" do
-    knight = Knight.new([0,0], "white")
+
     it "should not return value's that are out of bounds" do 
       expect(knight.possible_moves)
-    end
-
-    it "should" do
     end
   end
 
