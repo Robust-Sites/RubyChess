@@ -15,7 +15,7 @@ describe Bishop do
     end
   end
 
-  context "A bishop's possible_moves" do
+  context "A bishop's possible_moves on coordinate [5,5]" do
     bishop = Bishop.new([5,5], "black")
 
     it "does not return value's that are out of bounds" do
@@ -35,4 +35,6 @@ describe Bishop do
       assert_coordinates(bishop, coordinates_to_test)
     end
   end
+
+  context "A bishop's possible_moves on coordinate [4,1]" do
 end
