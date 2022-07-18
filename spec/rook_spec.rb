@@ -26,5 +26,13 @@ describe Rook do
       end
   end
 
+  context "A rook's possible_moves on coordinate [6,2]" do
+    rook = Rook.new([6,2], "black")
+
+    it "does not return value's that are out of bounds" do
+      moveset = bishop.possible_moves
+      out_of_bounds(moveset)
+    end
+
 end
 
