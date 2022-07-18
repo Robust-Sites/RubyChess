@@ -12,13 +12,12 @@ describe Rook do
     it "can return a list of possible_moves" do
       expect(rook.possible_moves).not_to be_nil
     end
+
+    it "returns all coordinates except its own available chess_lines" do
+      moveset = rook.possible_moves
+      expect(moveset).not_to include([0,0])
+    end
   end
 
-  #context "A rook's possible_moves" do
-  #  rook = Rook.new([0,0], "white")
-  #  it "should not return value's that are out of bounds" do
-  #    expect(rook.possible_moves).to
-  #  end
-  #end
 end
 
