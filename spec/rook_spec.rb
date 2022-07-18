@@ -30,9 +30,15 @@ describe Rook do
     rook = Rook.new([6,2], "black")
 
     it "does not return value's that are out of bounds" do
-      moveset = bishop.possible_moves
+      moveset = rook.possible_moves
       out_of_bounds(moveset)
     end
+
+    it "returns all coordinates except its own in available chess_lines" do
+      moveset = rook.possible_moves
+      expect(moveset).not_to include([6,2])
+    end
+  end
 
 end
 
