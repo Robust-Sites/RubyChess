@@ -21,7 +21,7 @@ describe Knight do
 
     it "returns all coordinates except its own in available chess_lines" do
       moveset = knight.possible_moves
-      expect(moveset).not_to include([4,1])
+      expect(moveset).not_to include([6,7])
     end
 
     it "returns correct coordinates for its moveset in array" do
@@ -39,6 +39,20 @@ describe Knight do
                            [3, 3, 4, 6, 7, 7],
                            [2, 0, 3, 3, 2, 0]) 
       assert_coordinates(knight, expected_moveset)
+    end
+
+    it "can return a list of possible_moves" do
+      expect(knight.possible_moves).not_to be_nil
+    end
+
+
+    it "should not return value's that are out of bounds" do 
+      expect(knight.possible_moves)
+    end
+
+    it "returns all coordinates except its own in available chess_lines" do
+      moveset = knight.possible_moves
+      expect(moveset).not_to include([5,1])
     end
   end
 end
