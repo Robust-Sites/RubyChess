@@ -47,5 +47,12 @@ describe Bishop do
       moveset = bishop.possible_moves
       expect(moveset).not_to include([4,1])
     end
+    
+    it "returns coordinate for its moveset in array" do
+      coordinates_to_test = create_coordinate_array(
+                              [3,5,6,7,0,1,2,3,5],
+                              [0,2,3,4,5,4,3,2,0])
+      assert_coordinates(bishop, coordinates_to_test)
+    end
   end
 end
