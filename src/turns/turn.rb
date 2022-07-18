@@ -9,4 +9,3 @@ class Turn
     @prev = nil 
   end
 end
-
