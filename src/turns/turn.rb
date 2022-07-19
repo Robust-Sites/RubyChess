@@ -1,9 +1,3 @@
-
-
-
-
-
-
 class Turn
   attr_accessor :piece, :move_from, :move_to, :captured_piece, :next, :prev
   def initialize(piece, move_from, move_to, captured_piece=nil) 
