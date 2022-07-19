@@ -1,16 +1,15 @@
 require_relative 'turn'
 
 class TurnList #This is a double linked list.
-  attr_accessor :next, :prev, :move_number
+  attr_accessor :head, :tail, :length
 
   def initialize()
-    @next = nil
-    @prev = nil
-    @move_number = 0
+    @head = nil
+    @tail = nil
+    @length = 0
   end
 
   def push(piece, move_from, move_to, captured_piece=nil)
-   
 end
 
 turnlist = TurnList.new
